@@ -1,13 +1,37 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #c3c3c3;
+}
+.MuiTabs-indicator {
+  background-color: #1ea7ff !important;
+}
+canvas {
+  width: 100%;
 }
