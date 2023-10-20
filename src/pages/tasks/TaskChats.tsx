@@ -52,6 +52,22 @@ const TasksChat = () => {
     (err) => console.table(err)
   );
 
+  const handleMessageSend = () => {
+    const data = {
+      profile: {
+        id: 2,
+        name: "Dio",
+        image: ProfileOne,
+        isActive: true,
+      },
+      messageType: MESSAGE_TYPE.SENT,
+      message: message,
+      time: "08:01 am",
+    };
+    setChatsData([...chatsData, data]);
+    setMessage("");
+  };
+
   const addAudioElement = (blob: Blob) => {
     const url = URL.createObjectURL(blob);
     const data = {
@@ -181,7 +197,12 @@ const TasksChat = () => {
             <Input
               placeholder="write here.."
               endAdornment={
-                message && <Share className="hover:cursor-pointer" />
+                message && (
+                  <Share
+                    className="hover:cursor-pointer"
+                    onClick={handleMessageSend}
+                  />
+                )
               }
               value={message}
               className="!text-sm"
