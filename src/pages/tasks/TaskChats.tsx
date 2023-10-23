@@ -5,7 +5,7 @@ import { ReactComponent as EllipsisHorizontal } from "../../assets/icons/ellipsi
 import { ReactComponent as Mic } from "../../assets/icons/mic.svg";
 import { ReactComponent as Share } from "../../assets/icons/send.svg";
 import { ReactComponent as Pause } from "../../assets/icons/pause.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -43,6 +43,8 @@ const TasksChat = () => {
   //   stopHandle();
   //   resetTranscript();
   // };
+
+  const chatRef = useRef<HTMLDivElement>(null);
 
   const recorderControls = useAudioRecorder(
     {
@@ -106,7 +108,9 @@ const TasksChat = () => {
     </Box>
   );
 
-  console.log(recorderControls.isRecording);
+  useEffect(() => {
+    chatRef.current && chatRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [chatsData.length]);
 
   return (
     <div className="overflow-hidden">
@@ -145,6 +149,7 @@ const TasksChat = () => {
                   data.messageType === MESSAGE_TYPE.SENT &&
                   "self-end flex-row-reverse"
                 }`}
+                ref={chatRef}
                 key={index}
               >
                 {getImageWithBadge(
@@ -203,6 +208,9 @@ const TasksChat = () => {
                     onClick={handleMessageSend}
                   />
                 )
+              }
+              onKeyDown={(event) =>
+                event.key === "Enter" && handleMessageSend()
               }
               value={message}
               className="!text-sm"
