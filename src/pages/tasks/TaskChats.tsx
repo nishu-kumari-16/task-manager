@@ -115,7 +115,7 @@ const TasksChat = () => {
   return (
     <div className="overflow-hidden">
       <Box
-        className="flex flex-col gap-6 h-full w-[307px] px-[30px] py-5 relative"
+        className="flex flex-col gap-6 h-full px-[30px] py-5 relative"
         bgcolor={theme.palette.white}
       >
         <Box className="flex justify-between items-center">
