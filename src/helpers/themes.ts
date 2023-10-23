@@ -27,6 +27,7 @@ declare module "@mui/material/styles" {
     malachite?: string;
     fireBush?: string;
     iron?: string;
+    charade?: string;
   }
 
   interface PaletteOptions {
@@ -55,6 +56,7 @@ declare module "@mui/material/styles" {
     malachite?: string;
     fireBush?: string;
     iron?: string;
+    charade?: string;
   }
 }
 
@@ -90,6 +92,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           malachite: "#11BD23",
           fireBush: "#E78830",
           iron: "#D1D2D6",
+          charade: "#ffffff",
           // palette values for light mode
           text: {
             primary: "#23235F",
@@ -131,6 +134,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           malachite: "#11BD23",
           fireBush: "#E78830",
           iron: "#393A49",
+          charade: "#282932",
           text: {
             primary: "#D7D7D7",
             portGore: "#D7D7D7",

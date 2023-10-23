@@ -7,9 +7,9 @@ import { ReactComponent as FilesIcon } from "../../assets/icons/files.svg";
 
 export const availableRoutes = [
   { name: "Dashboard", icon: <DashboardIcon />, path: "/" },
-  { name: "Timeline", icon: <TimelineIcon />, path: "/timeline" },
+  // { name: "Timeline", icon: <TimelineIcon />, path: "/timeline" },
   { name: "Tasks", icon: <TaskIcon />, path: "/tasks" },
   { name: "Settings", icon: <SettingsIcon />, path: "/settings" },
-  { name: "Share", icon: <ShareIcon />, path: "/share" },
+  // { name: "Share", icon: <ShareIcon />, path: "/share" },
   { name: "Files", icon: <FilesIcon />, path: "/files" },
 ];

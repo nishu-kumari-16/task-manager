@@ -23,7 +23,7 @@ const TasksCard = ({
     >
       <Box
         bgcolor={theme.palette.magnolia}
-        className="flex items-center justify-center px-6 gap-2 py-[1.125rem] "
+        className="flex items-center justify-center px-6 gap-2 py-[1.125rem] overflow-x-auto"
       >
         <PlayButton className="flex items-center min-w-[30px] min-h-[32px]" />
         <Box className="flex flex-col gap-1">
@@ -44,7 +44,7 @@ const TasksCard = ({
           </div>
         </Box>
       </Box>
-      <Box className="flex gap-8 items-center justify-between px-6 py-[1.125rem] flex-1">
+      <Box className="flex gap-8 items-center justify-between px-6 py-[1.125rem] flex-1 overflow-x-auto">
         <Box className="flex flex-col gap-1 w-fit">
           <Typography
             color={theme.palette.portGore}
@@ -57,7 +57,7 @@ const TasksCard = ({
               <Hyperlink />
               <Typography
                 color={theme.palette.royalBlue}
-                className="text-xs font-medium break-all"
+                className="text-xs font-medium "
               >
                 {link}
               </Typography>
@@ -98,7 +98,7 @@ const TasksCard = ({
             />
           </Box>
         </Box>
-        <StyledButton className="!capitalize gap-2.5 h-[2.5rem] rounded-xl !px-4">
+        <StyledButton className="!capitalize gap-2.5 h-[2.5rem] rounded-xl !px-4 !min-w-[7rem]">
           <Stopwatch />
           <Typography className="text-xs font-medium">Reminder</Typography>
         </StyledButton>

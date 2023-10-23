@@ -3,6 +3,7 @@ import App from "../App";
 import Dashboard from "../pages/dashboard";
 import Settings from "../pages/settings";
 import TaskPage from "../pages/tasks";
+import Files from "../pages/files";
 
 const getComponent = (component: React.ReactNode) => {
   return <App component={component} />;
@@ -31,6 +32,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/files",
-    element: getComponent(<div>Files</div>),
+    element: getComponent(<Files />),
   },
 ]);
